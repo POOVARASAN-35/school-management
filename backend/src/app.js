@@ -29,6 +29,11 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+// ✅ Root Routes 
+app.get("/", (req, res) => {
+  res.send("🚀 Backend is running successfully");
+});
+
 // ✅ Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
