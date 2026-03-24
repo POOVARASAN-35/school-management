@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchNotesBySubject } from "../../api/note.api";
-
+const BASE_URL = "https://school-management-ac64.onrender.com";
 const StudentNotes = ({ subjectId }) => {
   const [notes, setNotes] = useState([]);
 
@@ -17,7 +17,7 @@ const StudentNotes = ({ subjectId }) => {
         {notes.map((n) => (
           <li key={n._id}>
             <a
-              href={`http://localhost:5000${n.fileUrl}`}
+              href={`${BASE_URL}${n.fileUrl}`}
               target="_blank"
               rel="noreferrer"
             >

@@ -29,7 +29,7 @@ import {
   Zap,
   Layers
 } from "lucide-react";
-
+const BASE_URL = "https://school-management-ac64.onrender.com";
 const StudentMaterials = ({ subjectId }) => {
   const [materials, setMaterials] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -148,15 +148,15 @@ const StudentMaterials = ({ subjectId }) => {
 
   const handleDownload = (url, title) => {
     showNotification(`Downloading: ${title}`);
-    window.open(`http://localhost:5000${url}`, '_blank');
+    window.open(`${BASE_URL}${url}`, '_blank');
   };
 
   const handlePreview = (url) => {
-    window.open(`http://localhost:5000${url}`, '_blank');
+    window.open(`${BASE_URL}${url}`, '_blank');
   };
 
   const handleCopyLink = (url) => {
-    navigator.clipboard.writeText(`http://localhost:5000${url}`);
+    navigator.clipboard.writeText(`${BASE_URL}${url}`);
     showNotification('Link copied to clipboard!');
   };
 
@@ -444,7 +444,7 @@ const StudentMaterials = ({ subjectId }) => {
                   </button>
                   <button 
                     className="list-action external"
-                    onClick={() => window.open(`http://localhost:5000${material.fileUrl}`, '_blank')}
+                    onClick={() => window.open(`${BASE_URL}${material.fileUrl}`, '_blank')}
                     title="Open in new tab"
                   >
                     <ExternalLink size={16} />
