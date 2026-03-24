@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // 🔥 BACKEND URL
+  baseURL: "https://school-management-ac64.onrender.com/api", // 🔥 Live URL
   withCredentials: true,                // 🔥 SEND COOKIE
 });
 
