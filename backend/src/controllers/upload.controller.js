@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import path from "path";
-import pdfPoppler from "pdf-poppler";
+// import pdfPoppler from "pdf-poppler";
 import ExamPaper from "../models/ExamPaper.js";
 import { convertPdfToImages } from "../utils/pdfToImages.js";
 import QuestionPaper from "../models/QuestionPaper.js";
