@@ -21,10 +21,7 @@ const app = express();
 
 // ✅ CORS FIRST
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://school-management-five-brown.vercel.app"
-  ],
+  origin: "https://school-management-five-brown.vercel.app",
   credentials: true,
 }));
 
