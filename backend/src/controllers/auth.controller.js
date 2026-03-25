@@ -36,7 +36,8 @@ export const loginUser = async (req, res, next) => {
     // 6️⃣ Send token as cookie
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
     });
 
     // 7️⃣ Success response
@@ -75,7 +76,8 @@ export const adminLogin = async (req, res, next) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "lax",
+      secure: true,
+      sameSite: "none",
     });
 
     res.json({
@@ -105,7 +107,8 @@ export const getMe = async (req, res) => {
 export const logout = async (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
   });
 
   res.json({ message: "Logged out" });
